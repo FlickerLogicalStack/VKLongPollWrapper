@@ -174,7 +174,9 @@ class PrettyEvents:
 				"disabled_until": response[3]
 			}
 		else:
-			out["_event_code"] = event_code
-			out["data"] = response[1:]
+			out = {
+				"_event_code": event_code,
+				"data": response[1:]
+			}
 
 		return out
